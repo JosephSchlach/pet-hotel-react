@@ -48,25 +48,15 @@ class AddPet extends Component {
   // }
 
 
-toPetPage = () => {
-  this.props.history.push(`/home`)
-}
+  toPetPage = () => {
+    this.props.history.push(`/home`)
+  }
 
-toOwnerPage = () => {
-  this.props.history.push(`/owner`)
-}
+  toOwnerPage = () => {
+    this.props.history.push(`/owner`)
+  }
 
 
-render() {
-  return (
-      <div>
-
-      <div className="OwnerPet">
-        <div className="PetOwner" onClick={this.toPetPage}>
-          <h2>Pet</h2>
-        </div>
-        <div className="PetOwner"onClick={this.toOwnerPage}>
-          <h2>Owner</h2>
 
   render() {
     return (
@@ -143,7 +133,7 @@ render() {
               <td className='tData'>Cat</td>
               <td className='tData'>Orange</td>
               <td className='tData'>1-3-19</td>
-              <td className='tData'><i class="far fa-trash-alt"></i></td>
+              <td className='tData'><i className="far fa-trash-alt"></i></td>
             </tr>
           </tbody>
         </table>
