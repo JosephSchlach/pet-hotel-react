@@ -7,7 +7,7 @@ function* getOwners(action) {
     try {
         const getResponse = yield axios({
             type: 'GET',
-            url: '/api/owners/read.php',
+            url: '/api/owner/read.php',
         });
         const action = {
             type: 'SET_OWNERS',
