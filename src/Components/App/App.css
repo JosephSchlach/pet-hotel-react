@@ -1,0 +1,103 @@
+.MainHead{
+    height: 75px;
+    background-color: #41A1BF;
+    width:100%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Crete Round', serif;
+    text-align: center;
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color:white;
+}
+
+h2 {
+    font-family: 'Crete Round', serif;
+    text-align: center;
+    font-size: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+h3 {
+    font-family: 'Crete Round', serif;
+    text-align: center;
+    font-size: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+label {
+    font-family: 'Crete Round', serif;
+    font-size: 15px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+input {
+    padding: 12px 5px;
+    margin-bottom: 8px;
+    border: 1px solid rgb(119, 119, 119);
+    border-radius: 4px;
+    box-sizing: border-box;
+    height:10px;
+    width: 130px;
+  }
+
+  select {
+    width: 130px;
+    height:26px;
+    padding: 12px 20px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.OwnerPet{
+    width: 420px;
+    height: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.PetOwner{
+    display: inline-block;
+    background-color: #f0f0f0;
+    height:35px;
+    width: 200px;
+    margin-left:5px;
+    margin-right: 3px;
+    border: .1px solid #afafaf;
+    border-radius: 4px;
+}
+
+.forms {
+    align-items: center;
+    margin-top:25px;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    width: 130px;
+}
+
+.mainButton {
+    margin-top:10px;
+    margin-bottom: 50px;
+    height: 30px;
+    width: 130px;
+    color: #ffffff;
+    background-color: #41A1BF;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    border: 0px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
