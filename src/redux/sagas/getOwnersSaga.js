@@ -5,7 +5,7 @@ import axios from 'axios';
 function* getOwners(action) {
     console.log(`Hit the getOwners saga`, action);
     try {
-        const getResponse = yield axios.get({
+        const getResponse = yield axios({
             type: 'GET',
             url: '/api/owners/read.php',
         });
