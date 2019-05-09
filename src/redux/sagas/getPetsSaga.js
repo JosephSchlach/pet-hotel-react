@@ -7,8 +7,10 @@ function* getPets(action) {
     try {
         const getResponse = yield axios({
             type: 'GET',
-            url: 'http://localhost:8080/api/pet/read.php',
+            url: '/api/pet/read.php',
         });
+
+        console.log('response from server:', getResponse);
         const action = {
             type: 'SET_PETS',
             payload: getResponse.data
