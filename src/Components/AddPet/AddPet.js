@@ -115,14 +115,18 @@ class AddPet extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
+            {
+              this.props.reduxState.pets.map(pet =>
+            <tr key={pet.id} pet={pet}>
+              <td className='tData'>{pet.owner}</td>
+              <td className='tData'>{pet.pet_name}</td>
+              <td className='tData'>{pet.pet_breed}</td>
+              <td className='tData'>{pet.pet_color}</td>
               <td className='tData'>{}</td>
               <td className='tData'>{}</td>
             </tr>
+              )
+            }
           </tbody>
         </table>
       </div>
@@ -135,3 +139,4 @@ const mapReduxStateToProps = (reduxState) => ({
 })
 
 export default connect(mapReduxStateToProps)(withRouter(AddPet));
+
