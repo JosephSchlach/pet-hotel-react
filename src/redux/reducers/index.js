@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import pet from './petReducer';
-import hotel from './hotelReducer';
+import pets from './petReducer';
+import owners from './ownerReducer';
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
 // This is imported in index.js as rootSaga
@@ -8,8 +8,8 @@ import hotel from './hotelReducer';
 // Lets make a bigger object for our store, with the objects from our reducers.
 // This is what we get when we use 'state' inside of 'mapStateToProps'
 const rootReducer = combineReducers({
-   pet,
-   hotel,
+   pets,
+   owners,
 });
 
 export default rootReducer;
