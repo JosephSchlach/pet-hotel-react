@@ -16,6 +16,14 @@ class AddPet extends Component {
     },
   }
 
+  toPetPage = () => {
+    this.props.history.push(`/home`)
+  }
+
+  toOwnerPage = () => {
+    this.props.history.push(`/owner`)
+  }
+
   componentDidMount = () => {
     this.props.dispatch({ type: 'GET_PETS' });
   }
@@ -63,13 +71,12 @@ class AddPet extends Component {
       <div>
 
         <div className="OwnerPet">
-          <div className="PetOwner">
+          <div className="PetOwner" onClick={this.toPetPage}>
             <h2>Pet</h2>
           </div>
-          <div className="PetOwner">
+          <div className="PetOwner" onClick={this.toOwnerPage}>
             <h2>Owner</h2>
           </div>
-
         </div>
 
         <div className="forms">
@@ -123,7 +130,7 @@ class AddPet extends Component {
                 <th className='tHead'>Pet</th>
                 <th className='tHead'>Breed</th>
                 <th className='tHead'>Color</th>
-                <th className='tHead'>Checked In</th>
+                <th className='tHead'>Residency Status</th>
                 <th className='tHead'>Actions</th>
               </tr>
             </thead>
@@ -135,16 +142,28 @@ class AddPet extends Component {
                     <td className='tData'>{pet.pet_name}</td>
                     <td className='tData'>{pet.pet_breed}</td>
                     <td className='tData'>{pet.pet_color}</td>
-                    <td className='tData'>{}</td>
+                    {pet.checked_in ?
+                      <td className='tData'>In</td> :
+                      <td className='tData'>Out</td>
+                    }
                     <td className='tData'>{}</td>
                   </tr>
                 )
               }
             </tbody>
           </table> :
-          <div>
-            <p>Loading...</p>
-          </div>
+          <table>
+            <thead>
+              <tr>
+                <th className='tHead'>Owner</th>
+                <th className='tHead'>Pet</th>
+                <th className='tHead'>Breed</th>
+                <th className='tHead'>Color</th>
+                <th className='tHead'>Checked In</th>
+                <th className='tHead'>Actions</th>
+              </tr>
+            </thead>
+          </table>
         }
       </div>
     );
