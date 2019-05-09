@@ -47,6 +47,27 @@ class AddPet extends Component {
   //   })
   // }
 
+
+toPetPage = () => {
+  this.props.history.push(`/home`)
+}
+
+toOwnerPage = () => {
+  this.props.history.push(`/owner`)
+}
+
+
+render() {
+  return (
+      <div>
+
+      <div className="OwnerPet">
+        <div className="PetOwner" onClick={this.toPetPage}>
+          <h2>Pet</h2>
+        </div>
+        <div className="PetOwner"onClick={this.toOwnerPage}>
+          <h2>Owner</h2>
+
   render() {
     return (
       <div>
@@ -58,6 +79,7 @@ class AddPet extends Component {
           <div className="PetOwner">
             <h2>Owner</h2>
           </div>
+
         </div>
 
         <div className="forms">
