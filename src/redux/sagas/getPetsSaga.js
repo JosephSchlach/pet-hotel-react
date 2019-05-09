@@ -5,9 +5,9 @@ import axios from 'axios';
 function* getPets(action) {
     console.log(`Hit the getPets saga`, action);
     try {
-        const getResponse = yield axios.get({
+        const getResponse = yield axios({
             type: 'GET',
-            url: '/api/pets/read.php',
+            url: 'http://localhost:8080/api/pet/read.php',
         });
         const action = {
             type: 'SET_PETS',
