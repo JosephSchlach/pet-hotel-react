@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function* addPet(pets) {
     try {
-        yield axios.post({
+        yield axios({
             method: 'POST',
             url: '/api/pets/create.php',
             data: pets,

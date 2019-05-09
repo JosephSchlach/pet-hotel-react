@@ -127,14 +127,18 @@ class AddPet extends Component {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td className='tData'>Dale</td>
-              <td className='tData'>Barb</td>
-              <td className='tData'>Cat</td>
-              <td className='tData'>Orange</td>
-              <td className='tData'>1-3-19</td>
-              <td className='tData'><i className="far fa-trash-alt"></i></td>
+            {
+              this.props.reduxState.pets.map(pet =>
+            <tr key={pet.id} pet={pet}>
+              <td className='tData'>{pet.owner}</td>
+              <td className='tData'>{pet.pet_name}</td>
+              <td className='tData'>{pet.pet_breed}</td>
+              <td className='tData'>{pet.pet_color}</td>
+              <td className='tData'>{}</td>
+              <td className='tData'>{}</td>
             </tr>
+              )
+            }
           </tbody>
         </table>
       </div>

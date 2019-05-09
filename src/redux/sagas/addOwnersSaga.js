@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function* addOwner(owners) {
     try {
-        yield axios.post({
+        yield axios({
             method: 'POST',
             url: '/api/owners/create.php',
             data: owners,
