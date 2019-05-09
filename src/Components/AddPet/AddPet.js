@@ -115,32 +115,37 @@ class AddPet extends Component {
         <h3>History</h3>
         <br />
         {/* {JSON.stringify(this.props.reduxState.vin)} */}
-        <table>
-          <thead>
-            <tr>
-              <th className='tHead'>Owner</th>
-              <th className='tHead'>Pet</th>
-              <th className='tHead'>Breed</th>
-              <th className='tHead'>Color</th>
-              <th className='tHead'>Checked In</th>
-              <th className='tHead'>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {
-              this.props.reduxState.pets.map(pet =>
-            <tr key={pet.id} pet={pet}>
-              <td className='tData'>{pet.owner}</td>
-              <td className='tData'>{pet.pet_name}</td>
-              <td className='tData'>{pet.pet_breed}</td>
-              <td className='tData'>{pet.pet_color}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-            </tr>
-              )
-            }
-          </tbody>
-        </table>
+        {this.props.reduxState.pets[0] !== 'default_pet' ?
+          <table>
+            <thead>
+              <tr>
+                <th className='tHead'>Owner</th>
+                <th className='tHead'>Pet</th>
+                <th className='tHead'>Breed</th>
+                <th className='tHead'>Color</th>
+                <th className='tHead'>Checked In</th>
+                <th className='tHead'>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                this.props.reduxState.pets.map(pet =>
+                  <tr key={pet.id} pet={pet}>
+                    <td className='tData'>{pet.owner}</td>
+                    <td className='tData'>{pet.pet_name}</td>
+                    <td className='tData'>{pet.pet_breed}</td>
+                    <td className='tData'>{pet.pet_color}</td>
+                    <td className='tData'>{}</td>
+                    <td className='tData'>{}</td>
+                  </tr>
+                )
+              }
+            </tbody>
+          </table> :
+          <div>
+            <p>Loading...</p>
+          </div>
+        }
       </div>
     );
   }
