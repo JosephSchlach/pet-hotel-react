@@ -26,11 +26,11 @@ class App extends Component {
               path="/home"
               component={AddPet}
             />
-            {/* <Route
+            <Route
               exact
               path="/owner"
               component={AddOwner}
-            /> */}
+            />
           </Switch>
         </div>
       </Router>
