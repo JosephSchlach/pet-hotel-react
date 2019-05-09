@@ -47,6 +47,27 @@ class AddPet extends Component {
   //   })
   // }
 
+
+toPetPage = () => {
+  this.props.history.push(`/home`)
+}
+
+toOwnerPage = () => {
+  this.props.history.push(`/owner`)
+}
+
+
+render() {
+  return (
+      <div>
+
+      <div className="OwnerPet">
+        <div className="PetOwner" onClick={this.toPetPage}>
+          <h2>Pet</h2>
+        </div>
+        <div className="PetOwner"onClick={this.toOwnerPage}>
+          <h2>Owner</h2>
+
   render() {
     return (
       <div>
@@ -58,6 +79,7 @@ class AddPet extends Component {
           <div className="PetOwner">
             <h2>Owner</h2>
           </div>
+
         </div>
 
         <div className="forms">
@@ -116,12 +138,12 @@ class AddPet extends Component {
           </thead>
           <tbody>
             <tr>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
+              <td className='tData'>Dale</td>
+              <td className='tData'>Barb</td>
+              <td className='tData'>Cat</td>
+              <td className='tData'>Orange</td>
+              <td className='tData'>1-3-19</td>
+              <td className='tData'><i class="far fa-trash-alt"></i></td>
             </tr>
           </tbody>
         </table>

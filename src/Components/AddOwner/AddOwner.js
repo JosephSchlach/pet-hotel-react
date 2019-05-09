@@ -36,19 +36,25 @@ newOwner: {
 //   })
 // }
 
+toPetPage = () => {
+    this.props.history.push(`/home`)
+  }
+  
+  toOwnerPage = () => {
+    this.props.history.push(`/owner`)
+  }
+
 render() {
   return (
       <div>
-
-      <div className="OwnerPet">
-        <div className="PetOwner">
-          <h2>Pet</h2>
-        </div>
-        <div className="PetOwner">
-          <h2>Owner</h2>
-        </div>
+        <div className="OwnerPet">
+            <div className="PetOwner" onClick={this.toPetPage}>
+                <h2>Pet</h2>
+            </div>
+            <div className="PetOwner"onClick={this.toOwnerPage}>
+                <h2>Owner</h2>
+            </div>
       </div>
-
      <div className="forms">
      <h3>Owner</h3>
       <form onSubmit={this.handleSubmit}>
@@ -65,7 +71,7 @@ render() {
       </div>
 
 
-      <h3>Owners</h3>
+      <h3>All Owners</h3>
           <br />
           {/* {JSON.stringify(this.props.reduxState.vin)} */}
         <table>
@@ -80,7 +86,7 @@ render() {
             <tr>
               <td className='tData'>{}</td>
               <td className='tData'>{}</td>
-              <td className='tData'>{}</td>
+              <td className='tData'><i class="far fa-trash-alt"></i></td>
             </tr>
           </tbody>
         </table>
